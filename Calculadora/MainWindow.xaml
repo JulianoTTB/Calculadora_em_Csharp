@@ -12,6 +12,13 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        
+        <!-- Visor da Calculadora-->
+        <Grid Grid.Row="0" Background="gray" Margin="10,20,10,20">
+            <TextBlock x:Name="visor" FlowDirection="RightToLeft" Text="0" FontFamily="Bahnschrift" FontSize="48" Margin="5, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Grid>
+        <!-- Botões da Calculadora-->
+        <Grid Grid.Row="1">
+            
+        </Grid>
     </Grid>
 </Window>
