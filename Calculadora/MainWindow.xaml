@@ -6,6 +6,30 @@
         xmlns:local="clr-namespace:Calculadora"
         mc:Ignorable="d"
         Title="Calculadora" Height="600" Width="400" Background="#131414">
+    <Window.Resources>
+        <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#919090"/>
+        <SolidColorBrush x:Key="OperationButtonBackgroundBrush" Color="orange"/>
+
+        <Style x:Key="btnStyle" TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}"/>
+            <Setter Property="Margin" Value="10,10,10,10"/>
+            <Setter Property="FontFamily" Value="Bahnschrift"/>
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="Black" Background="{TemplateBinding Background}" CornerRadius="100" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btn-Operation-Style" BasedOn="{StaticResource btnStyle}" TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource OperationButtonBackgroundBrush}"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height=".4*"/>
@@ -13,12 +37,59 @@
         </Grid.RowDefinitions>
         
         <!-- Visor da Calculadora-->
-        <Grid Grid.Row="0" Background="gray" Margin="10,20,10,20">
-            <TextBlock x:Name="visor" FlowDirection="RightToLeft" Text="0" FontFamily="Bahnschrift" FontSize="48" Margin="5, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        </Grid>
+        <Border Margin="5,0,5,0"  CornerRadius="40" BorderThickness="10"  BorderBrush="Black" Background="gray" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <Grid Grid.Row="0">
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Background" Value="gray"/>
+                        <Setter Property="Margin" Value="10,20,10,20"/>
+                    </Style>
+                </Grid.Style>
+                <TextBlock x:Name="visorHistory" FlowDirection="RightToLeft" HorizontalAlignment="Right" VerticalAlignment="Top" Text="" FontFamily="Bahnschrift" FontSize="12" Margin="5,-10, 10, 20"/>
+                <!-- 13 caracteres máximo -->
+                <TextBlock x:Name="visor" FlowDirection="RightToLeft" Text="0" FontFamily="Bahnschrift" FontSize="48" Margin="5, 0, 5, 0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
         <!-- Botões da Calculadora-->
         <Grid Grid.Row="1">
-            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <!-- Botões primeira fileira-->
+            <Button Content="CE" Grid.Row="0" Grid.Column="0" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="C" Grid.Row="0" Grid.Column="1" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="X&#x207f;" Grid.Row="0" Grid.Column="2" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="√x" Grid.Row="0" Grid.Column="3" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <!-- Botões segunda fileira-->
+            <Button Content="7" Grid.Row="1" Grid.Column="0" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="8" Grid.Row="1" Grid.Column="1" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="9" Grid.Row="1" Grid.Column="2" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="/" Grid.Row="1" Grid.Column="3" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <!-- Botões terceira fileira-->
+            <Button Content="4" Grid.Row="2" Grid.Column="0" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="5" Grid.Row="2" Grid.Column="1" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="6" Grid.Row="2" Grid.Column="2" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="x" Grid.Row="2" Grid.Column="3" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <!-- Botões quarta fileira-->
+            <Button Content="1" Grid.Row="3" Grid.Column="0" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="2" Grid.Row="3" Grid.Column="1" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="3" Grid.Row="3" Grid.Column="2" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="+" Grid.Row="3" Grid.Column="3" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <!-- Botões quinta fileira-->
+            <Button Content="+/-" Grid.Row="4" Grid.Column="0" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="0" Grid.Row="4" Grid.Column="1" Style="{StaticResource btnStyle}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="-" Grid.Row="4" Grid.Column="2" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="=" Grid.Row="4" Grid.Column="3" Style="{StaticResource btn-Operation-Style}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
         </Grid>
     </Grid>
 </Window>

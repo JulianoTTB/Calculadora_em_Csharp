@@ -17,5 +17,21 @@ namespace Calculadora
         {
             InitializeComponent();
         }
+
+        
+        // Cor original do botão
+        private Brush originalBackground;
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Button button = sender as Button;
+            originalBackground = button.Background;
+            button.Background = (Brush)new BrushConverter().ConvertFrom("#6f6f6f");
+        }
+
+        private void Button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Button button = sender as Button;
+            button.Background = originalBackground;
+        }
     }
 }
