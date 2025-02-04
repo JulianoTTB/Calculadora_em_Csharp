@@ -128,7 +128,7 @@ namespace Calculadora
 
 
             firstNumber = result;
-            visor.Text = result.ToString().Substring(0, Math.Min(result.ToString().Length, 13));
+            visor.Text = result.ToString().Substring(0, Math.Min(result.ToString().Length, 13)).Replace(",", ".");
             resultOccured = true;
         }
 

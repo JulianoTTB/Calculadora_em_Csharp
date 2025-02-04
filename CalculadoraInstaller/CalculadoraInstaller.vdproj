@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_40FD97B066BC4507B84295793AAA176F"
+        "MsmKey" = "8:_3D9891DEA97B44A998849ECD8A9B3AEE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8F4237A13A1D4E38B5A94A4FD9B2AADD"
+        "MsmKey" = "8:_40FD97B066BC4507B84295793AAA176F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -50,6 +50,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -114,10 +122,10 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8F4237A13A1D4E38B5A94A4FD9B2AADD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3D9891DEA97B44A998849ECD8A9B3AEE"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\9056874_calculator_icon (1).ico"
-            "TargetName" = "8:9056874_calculator_icon (1).ico"
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\9056874_calculator_icon.ico"
+            "TargetName" = "8:9056874_calculator_icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_FE6CFD8EC094461388AFD85666CCE9F8"
             "Condition" = "8:"
@@ -322,7 +330,7 @@
             "Target" = "8:_40FD97B066BC4507B84295793AAA176F"
             "Folder" = "8:_A122F4AAD03C433A8609264765D910A9"
             "WorkingFolder" = "8:_FE6CFD8EC094461388AFD85666CCE9F8"
-            "Icon" = "8:_8F4237A13A1D4E38B5A94A4FD9B2AADD"
+            "Icon" = "8:_3D9891DEA97B44A998849ECD8A9B3AEE"
             "Feature" = "8:"
             }
         }
@@ -726,7 +734,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_40FD97B066BC4507B84295793AAA176F"
             {
-            "SourcePath" = "8:..\\Calculadora\\obj\\x86\\Release\\net8.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\Calculadora\\obj\\Release\\net8.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_FE6CFD8EC094461388AFD85666CCE9F8"
