@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2BCC1EC9EF064C90B2ED5FD9BAFB895D"
+        "MsmKey" = "8:_40FD97B066BC4507B84295793AAA176F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_40FD97B066BC4507B84295793AAA176F"
+        "MsmKey" = "8:_8F4237A13A1D4E38B5A94A4FD9B2AADD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -43,6 +43,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -59,6 +67,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -90,10 +114,10 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2BCC1EC9EF064C90B2ED5FD9BAFB895D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8F4237A13A1D4E38B5A94A4FD9B2AADD"
             {
-            "SourcePath" = "8:..\\Calculadora\\assets\\9056874_calculator_icon.ico"
-            "TargetName" = "8:9056874_calculator_icon.ico"
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\9056874_calculator_icon (1).ico"
+            "TargetName" = "8:9056874_calculator_icon (1).ico"
             "Tag" = "8:"
             "Folder" = "8:_FE6CFD8EC094461388AFD85666CCE9F8"
             "Condition" = "8:"
@@ -167,7 +191,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CalculadoraInstaller"
         "ProductCode" = "8:{2A3558CB-AB2F-4FA0-AD2A-FCA12353C9FC}"
-        "PackageCode" = "8:{002E7424-DB62-4F6B-988D-B428CC587EF2}"
+        "PackageCode" = "8:{FDBEB918-8118-4371-AD92-1EFC299117ED}"
         "UpgradeCode" = "8:{F5AEE0FC-22FE-4671-8275-DFB0B4E5375D}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -175,7 +199,7 @@
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:julianobiasotto@gmail.com"
+        "Manufacturer" = "8:CalculadoraTTB"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:CalculadoraInstaller"
@@ -298,7 +322,7 @@
             "Target" = "8:_40FD97B066BC4507B84295793AAA176F"
             "Folder" = "8:_A122F4AAD03C433A8609264765D910A9"
             "WorkingFolder" = "8:_FE6CFD8EC094461388AFD85666CCE9F8"
-            "Icon" = "8:_2BCC1EC9EF064C90B2ED5FD9BAFB895D"
+            "Icon" = "8:_8F4237A13A1D4E38B5A94A4FD9B2AADD"
             "Feature" = "8:"
             }
         }
