@@ -1,20 +1,38 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{594D506C-AFB8-420E-8A48-97D7ECC9330F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CalculadoraInstaller", "CalculadoraInstaller\CalculadoraInstaller.vdproj", "{3003926A-0754-482B-8703-41228BD20A66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Debug|x86.ActiveCfg = Debug|x86
+		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Debug|x86.Build.0 = Debug|x86
 		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Release|x64.ActiveCfg = Release|Any CPU
+		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Release|x86.ActiveCfg = Release|x86
+		{594D506C-AFB8-420E-8A48-97D7ECC9330F}.Release|x86.Build.0 = Release|x86
+		{3003926A-0754-482B-8703-41228BD20A66}.Debug|Any CPU.ActiveCfg = Debug
+		{3003926A-0754-482B-8703-41228BD20A66}.Debug|x64.ActiveCfg = Debug
+		{3003926A-0754-482B-8703-41228BD20A66}.Debug|x86.ActiveCfg = Debug
+		{3003926A-0754-482B-8703-41228BD20A66}.Release|Any CPU.ActiveCfg = Release
+		{3003926A-0754-482B-8703-41228BD20A66}.Release|x64.ActiveCfg = Release
+		{3003926A-0754-482B-8703-41228BD20A66}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
